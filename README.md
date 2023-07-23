@@ -30,7 +30,38 @@ Code to reproduce [Soenksen, LR. et al 2021, on Science Translational Medicine](
 > Due to egress limits on GIT, this repo requires that you download the following "Outputs" folder, which includes the trained Deep Convolutional Neural Network (DCNN) model weight files directly from this link: https://www.dropbox.com/s/bfjqv5yfynxr6sd/Models.zip?dl=0. After download place in the main project folder and unzip.
 
 #### INSTALL AND RUN MODEL
+
+> Create conda env manually
+
+```
+conda create --name env
+
+conda activate env
+
+python -m ipykernel install --user --name=env
+
+conda env update --file local.yml --prune
+```
+
+> Create automatically
+
 `conda env create -f environment.yml`
-> You may also want to use 'environment-from-history,' which is the shorter version that does not include automatically handle dependencies by conda
+
+> You may also want to use 'environment,' which is the full version that include automatically handle dependencies by conda
+
+> Install other dependencies
+
+```
+pip install --user cython h5py
+pip install --user git+https://github.com/Theano/Theano.git
+```
+
+```
+git clone https://github.com/heuritech/convnets-keras.git
+cd convnets-keras
+sudo python setup.py install
+```
+
+> Install pip dependencies
 
 `pip install -r requirements.txt`
