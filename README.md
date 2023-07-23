@@ -28,3 +28,9 @@ Code to reproduce [Soenksen, LR. et al 2021, on Science Translational Medicine](
  
 #### MODELS (Direct Download)
 > Due to egress limits on GIT, this repo requires that you download the following "Outputs" folder, which includes the trained Deep Convolutional Neural Network (DCNN) model weight files directly from this link: https://www.dropbox.com/s/bfjqv5yfynxr6sd/Models.zip?dl=0. After download place in the main project folder and unzip.
+
+#### INSTALL AND RUN MODEL
+`conda env create -f environment.yml`
+> You may also want to use 'environment-from-history,' which is the shorter version that does not include automatically handle dependencies by conda
+
+`pip install -r requirements.txt`
